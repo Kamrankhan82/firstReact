@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import * as cal from './calculator';
+import Heading from './heading';
+import './component.css';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+ReactDOM.render(<>
+    <Heading/>
+<ul>
+    <li>The Sum of the two number is {cal.sum(10,5)}</li>
+    <li>The Difference of the two number is {cal.sub(10,5)}</li>
+    <li>The Product of the two number is {cal.multi(10,5)}</li>
+    <li>The Division of the two number is {cal.div(10,5)}</li>
+</ul></>,
+document.getElementById('root')
+
+
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
